@@ -28,9 +28,10 @@ class MainActivity : AppCompatActivity() {
                 .setPositiveButton("YA"){dialogInterface : DialogInterface, i : Int ->
                     Toast.makeText(this, "DATA ANDA TERHAPIUS", Toast.LENGTH_LONG).show()
                 }
-                .setNegativeButton("TIDAK", {dialogInterface2 : DialogInterface, i : Int ->
+                .setNegativeButton("TIDAK") {dialogInterface2 : DialogInterface, i : Int ->
                     Toast.makeText(this, "TIDAK JADI", Toast.LENGTH_LONG).show()
-                } )
+                }
+                .show()
         }
     }
 }

@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chapter4b">
         <activity
-            android:name=".latihan.MainActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".latihan.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

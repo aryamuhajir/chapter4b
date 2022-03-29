@@ -53,7 +53,7 @@ class Fragment1 : Fragment() {
             Snackbar.make(it, "PINDAH HALAMAN", Snackbar.LENGTH_INDEFINITE).setAction(
                 "PINDAH"
             ){
-                val data = bundleOf("NAMA" to nama)
+                val data = bundleOf("NAMA" to editText.text.toString())
                 Navigation.findNavController(view).navigate(
                     R.id.action_fragment1_to_fragment2,
                     data
