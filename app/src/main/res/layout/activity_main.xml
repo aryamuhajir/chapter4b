@@ -18,5 +18,21 @@
         android:layout_height="wrap_content"
         android:text="KEDUA"
         android:id="@+id/btnKedua"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KETIGA"
+        android:id="@+id/btnKetiga"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KEEMPAT"
+        android:id="@+id/btnKeempat"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KELIMA"
+        android:id="@+id/btnKelima"/>
+
 
 </LinearLayout>

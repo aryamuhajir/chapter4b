@@ -3,9 +3,12 @@ package com.binar.chapter4b
 import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.custom_dialog.*
+import kotlinx.android.synthetic.main.custom_dialog.view.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +35,36 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "TIDAK JADI", Toast.LENGTH_LONG).show()
                 }
                 .show()
+        }
+        btnKetiga.setOnClickListener {
+            val aa = AlertDialog.Builder(this)
+            val bb = aa.create()
+            aa.setTitle("dismiss")
+            aa.setMessage("ISI MESSAGE DARI EXAMPLE OF DISMISS")
+            aa.setPositiveButton("ya"){dialog : DialogInterface, i :Int ->
+                Toast.makeText(this, "TOAST YA", Toast.LENGTH_LONG).show()
+            }
+            aa.setNeutralButton("netral"){dialog : DialogInterface, i : Int ->
+                bb.dismiss()
+            }
+                .show()
+        }
+        btnKeempat.setOnClickListener {
+            val aa = AlertDialog.Builder(this)
+            val bb = aa.create()
+            val customDialog = LayoutInflater.from(this).inflate(androidx.core.R.layout.custom_dialog, null, false)
+            customDialog.pgbtn.setOnClickListener {
+                val nama = customDialog.namaD.text.toString()
+                Toast.makeText(this,"$nama", Toast.LENGTH_LONG).show()
+                bb.dismiss()
+            }
+                aa.setView(customDialog)
+                aa.create()
+                aa.show()
+
+        }
+        btnKelima.setOnClickListener {
+            AlertDialog().show(supportFragmentManager, "abc")
         }
     }
 }
