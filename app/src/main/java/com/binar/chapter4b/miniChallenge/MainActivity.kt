@@ -1,4 +1,4 @@
-package com.binar.chapter4b.latihan
+package com.binar.chapter4b.miniChallenge
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

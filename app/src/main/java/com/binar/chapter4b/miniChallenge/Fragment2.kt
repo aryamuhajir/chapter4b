@@ -1,4 +1,4 @@
-package com.binar.chapter4b.latihan
+package com.binar.chapter4b.miniChallenge
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

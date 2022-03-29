@@ -13,7 +13,7 @@
             android:name=".latihan1.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".latihan.MainActivity"
+            android:name=".miniChallenge.MainActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
