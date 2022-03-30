@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chapter4b">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".latihan1.MainActivity"
             android:exported="false" />
         <activity
             android:name=".miniChallenge.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".TugasSelasa.MainActivitySelasa"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

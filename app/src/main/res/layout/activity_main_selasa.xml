@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".TugasSelasa.MainActivitySelasa">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KASIR BELANJA"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:id="@+id/kasirText"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kasirText"
+        android:hint="BARANG"
+        android:id="@+id/editBarang"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/editJumlah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editBarang"
+        android:layout_marginTop="20dp"
+        android:hint="JUMLAH"
+        android:inputType="number"
+        android:textColorHint="@color/black"
+        android:textSize="20sp" />
+    <EditText
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editJumlah"
+        android:id="@+id/editHarga"
+        android:inputType="number"
+        android:hint="HARGA"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PROSES 1"
+        android:id="@+id/proses1"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="20dp"/>
+
+    <Button
+        android:id="@+id/proses2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/proses1"
+        android:text="PROSES 2" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="5dp"
+        android:backgroundTint="#ACF4AE"
+
+        android:layout_alignParentBottom="true">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Barang"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="---"
+                    android:textStyle="bold"
+                    android:id="@+id/namaBarang"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jumlah"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="---"
+                    android:textStyle="bold"
+                    android:id="@+id/jumlahBarang"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Harga"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="---"
+                    android:textStyle="bold"
+                    android:id="@+id/hargaBarang"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"/>
+
+            </TableRow>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"/>
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="---"
+                    android:textStyle="bold"
+                    android:id="@+id/totalBarang"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kembalian"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="---"
+                    android:textStyle="bold"
+                    android:id="@+id/kembalianBarang"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="20sp"/>
+
+            </TableRow>
+        </TableLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

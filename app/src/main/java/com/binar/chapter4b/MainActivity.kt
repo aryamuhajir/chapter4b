@@ -53,11 +53,7 @@ class MainActivity : AppCompatActivity() {
             val aa = AlertDialog.Builder(this)
             val bb = aa.create()
             val customDialog = LayoutInflater.from(this).inflate(androidx.core.R.layout.custom_dialog, null, false)
-            customDialog.pgbtn.setOnClickListener {
-                val nama = customDialog.namaD.text.toString()
-                Toast.makeText(this,"$nama", Toast.LENGTH_LONG).show()
-                bb.dismiss()
-            }
+
                 aa.setView(customDialog)
                 aa.create()
                 aa.show()
