@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_kamis.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3591485507246377" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.3591485507246377" />
         <entry key="app/src/main/res/layout/activity_main3.xml" value="0.3591485507246377" />
@@ -14,6 +15,8 @@
         <entry key="app/src/main/res/layout/fragment_alert_dialog.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/fragment_selasa.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/fragment_selasa1.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/layout/google_adapter.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/layout/item_mhs_adapter.xml" value="0.21822916666666667" />
       </map>
     </option>
   </component>

@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chapter4b">
         <activity
+            android:name=".TugasSelasa.MainActivitySelasa"
+            android:exported="false" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
@@ -19,7 +23,7 @@
             android:name=".miniChallenge.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".TugasSelasa.MainActivitySelasa"
+            android:name=".kamis.Kamis"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
