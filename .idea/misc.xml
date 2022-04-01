@@ -4,10 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_kamis.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/layout/activity_latihan_shared.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3591485507246377" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.3591485507246377" />
         <entry key="app/src/main/res/layout/activity_main3.xml" value="0.3591485507246377" />
         <entry key="app/src/main/res/layout/activity_main_selasa.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/layout/activity_shared.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/layout/activity_shared_dua.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/layout/custom_dialog.xml" value="0.3591485507246377" />
         <entry key="app/src/main/res/layout/custom_dialog_selasa.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/fragment_1.xml" value="0.3591485507246377" />

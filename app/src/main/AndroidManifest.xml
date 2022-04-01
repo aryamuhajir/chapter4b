@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chapter4b">
         <activity
+            android:name=".jumat.Shared"
+            android:exported="false" />
+        <activity
+            android:name=".jumat.SharedDua"
+            android:exported="false" />
+        <activity
+            android:name=".kamis.Kamis"
+            android:exported="false" />
+        <activity
             android:name=".TugasSelasa.MainActivitySelasa"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="false" />
@@ -23,7 +31,7 @@
             android:name=".miniChallenge.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".kamis.Kamis"
+            android:name=".jumat.LatihanShared"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
