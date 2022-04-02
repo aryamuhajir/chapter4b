@@ -1,7 +1,6 @@
 package com.binar.chapter4b.TugasSabtu
 
 import android.content.Context
-import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,9 +10,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.Navigation
 import com.binar.chapter4b.R
-import com.binar.chapter4b.jumat.SharedDua
 import kotlinx.android.synthetic.main.activity_latihan_shared.*
-import kotlinx.android.synthetic.main.fragment_login.*
+import kotlinx.android.synthetic.main.fragment_register.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,15 +20,15 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Login.newInstance] factory method to
+ * Use the [Register.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Login : Fragment() {
-    lateinit var prefs2 : SharedPreferences
-
+class Register : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    lateinit var prefs2 : SharedPreferences
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,41 +43,38 @@ class Login : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        return inflater.inflate(R.layout.fragment_register, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
         prefs2 = requireActivity().getSharedPreferences("datalogin", Context.MODE_PRIVATE)
 
 
-        login()
-        btnRegister.setOnClickListener {
-            Navigation.findNavController(requireView()).navigate(R.id.action_login_to_register)
+        btnRegister2.setOnClickListener {
+            if (edtNoHP.text.isNotBlank() && edtEmail.text.isNotBlank()&& edtNama.text.isNotBlank()&& edtPassword2.text.isNotBlank()&& edtKonfirmasiPassword.text.isNotBlank() && edtPassword2.text.toString().equals(edtKonfirmasiPassword.text.toString())){
+                save()
+                Navigation.findNavController(requireView()).navigate(R.id.action_register_to_login)
 
-        }
-
-
-    }
-    fun login(){
-        btnLogin.setOnClickListener {
-            val sf = prefs2.edit()
-            val nohp = edtNoHP2.text.toString()
-            val password = edtPassword.text.toString()
-            if (nohp.equals(prefs2.getString("NOHP","")) && password.equals(prefs2.getString("PASSWORD",""))){
-                sf.putString("USERNAME", nohp)
-                sf.putString("PASSWORD", password)
-                sf.putString("STATUS", "masuk")
-                sf.apply()
-
-                Navigation.findNavController(requireView()).navigate(R.id.action_login_to_welcome)
             }else{
-                Toast.makeText(requireContext(), "USERNAME ATAU PASSWORD SALAH", Toast.LENGTH_LONG).show()
-            }
+                Toast.makeText(requireContext(), "DATA BELUM TERISI ATAU PASSWORD TIDAK SESUAI", Toast.LENGTH_LONG).show()
 
+            }
         }
+    }
+    fun save(){
+
+            val sf = prefs2.edit()
+            val nohp = edtNoHP.text.toString()
+            val email = edtEmail.text.toString()
+            val nama = edtNama.text.toString()
+            val password = edtPassword2.text.toString()
+            sf.putString("NOHP", nohp)
+            sf.putString("EMAIL", email)
+            sf.putString("NAMA", nama)
+            sf.putString("PASSWORD", password)
+            sf.apply()
+        
     }
 
     companion object {
@@ -89,12 +84,12 @@ class Login : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment Login.
+         * @return A new instance of fragment Register.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Login().apply {
+            Register().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

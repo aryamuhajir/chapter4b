@@ -6,20 +6,13 @@
     android:layout_margin="20dp"
     tools:context=".TugasSabtu.Welcome">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:layout_centerHorizontal="true"
-        android:text="HOME"/>
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello, "
         android:textSize="30sp"
-        android:layout_centerInParent="true"
         android:id="@+id/helo"/>
     <TextView
         android:layout_width="wrap_content"
@@ -29,14 +22,13 @@
         android:textStyle="bold"
         android:layout_toEndOf="@id/helo"
         android:id="@+id/usernameTxt"
-        android:layout_centerInParent="true"/>
+        />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:text="LOGOUT"
+        android:layout_alignParentEnd="true"
         android:id="@+id/btnLogout"/>
 
 

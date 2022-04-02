@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chapter4b.NoActionBar">
         <activity
-            android:name=".TugasSabtu.Tugas"
+            android:name=".TugasSabtu.Splash"
             android:exported="false" />
         <activity
             android:name=".jumat.LatihanShared"
@@ -37,7 +37,7 @@
             android:name=".miniChallenge.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".TugasSabtu.Splash"
+            android:name=".TugasSabtu.Tugas"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -52,8 +52,8 @@ class Welcome : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        sf = requireActivity().getSharedPreferences("tugas", Context.MODE_PRIVATE)
-        val getNama = sf.getString("USERNAME","")
+        sf = requireActivity().getSharedPreferences("datalogin", Context.MODE_PRIVATE)
+        val getNama = sf.getString("NAMA","")
         usernameTxt.text = getNama
 
         btnLogout.setOnClickListener {
