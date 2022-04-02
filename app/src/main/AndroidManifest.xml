@@ -8,7 +8,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Chapter4b">
+        android:theme="@style/Theme.Chapter4b.NoActionBar">
+        <activity
+            android:name=".TugasSabtu.Tugas"
+            android:exported="false" />
+        <activity
+            android:name=".jumat.LatihanShared"
+            android:exported="false" />
         <activity
             android:name=".jumat.Shared"
             android:exported="false" />
@@ -31,7 +37,7 @@
             android:name=".miniChallenge.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".jumat.LatihanShared"
+            android:name=".TugasSabtu.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
